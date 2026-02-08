@@ -1,47 +1,45 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
-const Projects = () => {
+const ProjectCard = ({ title, main, liveLink, sourceCode }) => {
   return (
-    <div id="Projects" className="p-10 md:p-24 text-white">
+    <div className="w-80 md:w-96 bg-slate-900 bg-opacity-40 rounded-2xl p-6 shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
 
-      <h1 className="text-2xl md:text-4xl font-bold mb-10 text-center">
-        My Projects
-      </h1>
+      {/* Project Title */}
+      <h2 className="text-xl font-bold mb-3">{title}</h2>
 
-      <div className="flex flex-wrap justify-center gap-10">
+      {/* Description */}
+      <p className="text-sm text-gray-300 leading-relaxed mb-6">
+        {main}
+      </p>
 
-        {/* Portfolio Website */}
-        <ProjectCard
-          title="Personal Portfolio Website"
-          main="Modern responsive portfolio built using React and Tailwind CSS showcasing projects, skills, and contact details."
-          video="/videos/portfolio.mp4"
-          liveLink="https://nitinmathur.netlify.app/"
-          sourceCode="https://github.com/nitinmathur021-png/Portfolio"
-        />
+      {/* Buttons */}
+      <div className="flex gap-4">
 
-        {/* Voice & Video Calling App */}
-        <ProjectCard
-          title="Voice & Video Calling App"
-          main="Real-time calling application built using React and ZEGOCLOUD SDK with peer-to-peer video and voice communication."
-          video="/videos/calling.mp4"
-          liveLink="https://video-voice.netlify.app/"
-          sourceCode="https://github.com/nitinmathur021-png/video-calling"
-        />
+        {/* Live Demo */}
+        <a
+          href={liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full text-sm font-semibold transition"
+        >
+          <FiExternalLink /> Live
+        </a>
 
-        {/* Web Fuzzing Tool */}
-        <ProjectCard
-          title="Web Fuzzing Tool"
-          main="Security testing tool built using React, Tailwind CSS, and Node.js to detect SQL Injection (SQLi) and XSS vulnerabilities."
-          video="/videos/fuzzing.mp4"
-          liveLink="https://your-fuzzing-live-link.netlify.app/"
-          sourceCode="https://github.com/nitinmathur021-png/web-fuzzing-tool"
-        />
+        {/* Source Code */}
+        <a
+          href={sourceCode}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-gray-800 hover:bg-gray-900 px-4 py-2 rounded-full text-sm font-semibold transition"
+        >
+          <FaGithub /> Code
+        </a>
 
       </div>
-
     </div>
   );
 };
 
-export default Projects;
+export default ProjectCard;

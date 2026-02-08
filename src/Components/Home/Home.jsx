@@ -1,5 +1,5 @@
 import React from "react";
-import avatarImg from "../../assets/7358602-removebg-preview.png";
+import avatarImg from "../../assets/ChatGPT Image Feb 7, 2026, 05_20_10 PM.png";
 import TextChange from "../TextChange";
 
 const Home = () => {

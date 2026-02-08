@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImg from "../../assets/7358653-removebg-preview.png";
+import AboutImg from "../../assets/ChatGPT Image Feb 7, 2026, 05_22_34 PM.png";
 import { IoArrowForward } from "react-icons/io5";
 
 const About = () => {
@@ -64,23 +64,6 @@ const About = () => {
                 </p>
               </span>
             </div>
-
-            {/* GOALS */}
-            {/* <div className="flex gap-3 py-4">
-              <IoArrowForward size={28} className="mt-1 text-blue-400" />
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold">
-                  Career Goals
-                </h1>
-                <p className="text-sm md:text-md leading-relaxed">
-                  I am passionate about web development and building
-                  real-world applications. My goal is to gain practical
-                  experience through internships and contribute to impactful
-                  projects while continuously learning new technologies.
-                </p>
-              </span>
-            </div> */}
-
           </ul>
         </div>
       </div>
